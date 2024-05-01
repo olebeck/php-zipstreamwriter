@@ -788,8 +788,9 @@
 			if (!($this->currdir["flags"] & self::FLAG_USE_DATA_DESCRIPTOR))  return;
 
 			// Clear the flag.
-			$this->currdir["flags"] ^= self::FLAG_USE_DATA_DESCRIPTOR;
-
+			//$this->currdir["flags"] ^= self::FLAG_USE_DATA_DESCRIPTOR;
+			// dont clear the flag because that breaks opening the zip in most programs
+			
 			$x = strlen($this->outdata);
 			$x2 = $x;
 
